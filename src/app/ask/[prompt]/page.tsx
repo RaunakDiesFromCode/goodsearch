@@ -1,5 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search",
+};
 
 export default async function Page({
   params,
@@ -13,7 +18,7 @@ export default async function Page({
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction:
-      "Use HTML tags to format the response, but do not use the ```html start and ``` end tags. Use <b> for bold text and <i> for italic text. Use <br> for new lines.",
+      "Use HTML tags to format the response, but do not use the ```html start and ``` end tags. Use <b> for bold text and <i> for italic text. Use <br> for new lines. If the prompt is regarding of buying something then tell user what to buy or how to buy. and after fininshing of each points, leave a blank line",
   });
 
   try {

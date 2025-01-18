@@ -27,7 +27,7 @@ const SearchArea = () => {
       <div className="mb-16 text-center">
         <div className="text-6xl font-extrabold ">
           Don&apos;t know what to{" "}
-          <span className="dark:text-red-400 text-blue-500 m-0 p-0">
+          <span className="bg-gradient-to-r dark:from-red-400 dark:to-pink-500 bg-clip-text text-transparent from-cyan-600 to-blue-600 drop-shadow-2xl shadow-foreground/10 m-0 p-0">
             Search
           </span>{" "}
           for?
@@ -104,13 +104,10 @@ const SearchArea = () => {
                     </Button>
                     <Button
                       variant={"outline"}
-                        className="rounded-full p-0 m-0 px-3 opacity-40 hover:opacity-80 transition-all duration-200"
-                        onClick={() => {
-                          window.open(
-                            `/ask/${response}`
-                          );
-                        }
-                      }
+                      className="rounded-full p-0 m-0 px-3 opacity-40 hover:opacity-80 transition-all duration-200"
+                      onClick={() => {
+                        window.open(`/ask/${response}`);
+                      }}
                     >
                       <FaWandMagicSparkles />
                     </Button>

@@ -26,7 +26,10 @@ const Navbar = () => {
         className="hover:no-underline font-extrabold text-2xl transition-all duration-200 m-0 p-0 ml-3"
       >
         Good
-        <span className="dark:text-red-400 text-blue-500 m-0 p-0">Search</span>.
+        <span className="bg-gradient-to-r dark:from-red-400 dark:to-pink-500 bg-clip-text text-transparent from-cyan-600 to-blue-600 m-0 p-0">
+          Search
+        </span>
+        .
       </Link>
     </div>
   );
